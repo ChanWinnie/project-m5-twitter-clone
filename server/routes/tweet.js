@@ -133,7 +133,7 @@ router.put('/api/tweet/:tweetId/retweet', (req, res) => {
   if (retweet === currentlyRetweeted) {
     res.status(409).json({
       error:
-        'You are not allowed to like an already-liked tweet, or unlike an already-unliked tweet.',
+        'You are not allowed to retweet an already-tweeted tweet, or untweet an already-untweeted tweet.',
     });
     return;
   }
